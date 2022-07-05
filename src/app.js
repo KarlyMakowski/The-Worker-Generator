@@ -85,11 +85,11 @@ window.onload = function() {
     let personFullName =
       person[randomPosition].name + " " + person[randomPosition].lastName;
 
-    let auxAddress = Math.floor(Math.random() * address.length);
-    let workerAddress = `${address[auxAddress].dir.avenida} ${address[auxAddress].dir.city} ${address[auxAddress].cp}`;
+    let randomPosition2 = randomNumber(address.length);
+    let workerAddress = `${address[randomPosition2].dir.avenida} ${address[randomPosition2].dir.city} ${address[randomPosition2].cp}`;
 
-    let auxJob = Math.floor(Math.random() * job.length);
-    let workerJob = `${job[auxJob].position.level} ${job[auxJob].position.job} at ${job[auxJob].company} for ${job[auxJob].antiquity} years.`;
+    let randomPosition3 = randomNumber(job.length);
+    let workerJob = `${job[randomPosition3].position.level} ${job[randomPosition3].position.job} at ${job[randomPosition3].company} for ${job[randomPosition3].antiquity} years.`;
 
     let randomWorker = `${personFullName} ${workerAddress} ${workerJob}`;
 
